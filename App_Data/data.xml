@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<notes>
+  <note>
+    <id>0</id>
+    <to>Fry</to>
+    <from>Leela</from>
+    <heading>Reminder</heading>
+    <body>Don't forget me this weekend!!!</body>
+  </note>
+  <note>
+    <id>1</id>
+    <to>Leela</to>
+    <from>Fry</from>
+    <heading>Finally!!!</heading>
+    <body>Leela, have you asked permission from the Professor?</body>
+  </note>
+  <note>
+    <id>2</id>
+    <to>Fry</to>
+    <from>Leela</from>
+    <heading>Rejection</heading>
+    <body>You know what? In second thoughts, i'm going out with Lars this weekend. Sorry...</body>
+  </note>
+
+</notes>
