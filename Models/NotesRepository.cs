@@ -1,2 +1,8 @@
-////// TODO
-The repo here will take care of all CRUD operations
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Xml.Linq;
+
+namespace IoCDependencyInjection.Models
+{
