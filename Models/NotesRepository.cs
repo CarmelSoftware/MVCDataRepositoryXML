@@ -11,3 +11,5 @@ public class NotesRepository : INotesRepository
 private List<Note> notes = new List<Note>();
 private int iNumberOfEntries = 1;
 private XDocument doc;
+
+public NotesRepository()
