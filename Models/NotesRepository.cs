@@ -29,3 +29,8 @@ Body = node.Descendants("body").FirstOrDefault().Value
 
 iNumberOfEntries = notes.Count;
 }
+
+public IEnumerable<Note> GetAll()
+{
+return notes;
+}
