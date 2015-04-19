@@ -34,3 +34,7 @@ public IEnumerable<Note> GetAll()
 {
 return notes;
 }
+public Note Get(int id)
+{
+return notes.Find(p => p.ID == id);
+}
