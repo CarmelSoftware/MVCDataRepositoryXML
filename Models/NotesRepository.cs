@@ -38,3 +38,23 @@ public Note Get(int id)
 {
 return notes.Find(p => p.ID == id);
 }
+public Note Add(Note item)
+{
+if (item == null)
+{
+throw new ArgumentNullException("item");
+}
+
+item.ID = iNumberOfEntries++;
+
+XElement newNode = new XElement("note");
+XElement id = new XElement("id"); id.Value = item.ID.ToString() ;
+XElement to = new XElement("to");to.Value = item.To;
+XElement from = new XElement("from"); from.Value = item.From;
+XElement heading = new XElement("heading"); heading.Value = item.Heading;
+XElement body = new XElement("body"); body.Value = item.Body;
+newNode.Add(id, to, from, heading, body);
+doc.Root.Add(newNode);
+SaveXML();
+return item;
+}
