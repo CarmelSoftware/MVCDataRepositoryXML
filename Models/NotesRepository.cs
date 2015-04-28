@@ -58,3 +58,17 @@ doc.Root.Add(newNode);
 SaveXML();
 return item;
 }
+public bool Update(Note item)
+{
+if (item == null)
+{
+throw new ArgumentNullException("item");
+} 
+XElement note = doc.Descendants("note").Where(n => Int32.Parse( n.Descendants("id").FirstOrDefault().Value ) == item.ID ).FirstOrDefault();
+note.Descendants("to").FirstOrDefault().Value = item.To;
+note.Descendants("from").FirstOrDefault().Value = item.From;
+note.Descendants("heading").FirstOrDefault().Value = item.Heading;
+note.Descendants("body").FirstOrDefault().Value = item.Body;
+SaveXML();
+return true;
+}
