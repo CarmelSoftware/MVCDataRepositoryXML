@@ -72,3 +72,16 @@ note.Descendants("body").FirstOrDefault().Value = item.Body;
 SaveXML();
 return true;
 }
+public bool Delete(int id)
+{
+doc.Root.Descendants("note").Where(n => Int32.Parse(n.Descendants("id").First().Value ) == id).Remove() ;
+SaveXML();
+return true;
+}
+
+private void SaveXML()
+{
+doc.Save(HttpContext.Current.Server.MapPath("~/App_Data/data.xml"));
+}
+}
+}
